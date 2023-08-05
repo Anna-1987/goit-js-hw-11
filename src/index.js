@@ -122,7 +122,3 @@ function createGalleryCard(searchResults){
     }).join('');
 }
 
-
-function resetPage(){
-    page = 1;
-}
