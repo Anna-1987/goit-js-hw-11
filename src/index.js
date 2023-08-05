@@ -31,7 +31,7 @@ function onSearch(e){
     refs.gallery.innerHTML = '';
     page = 1;
 
-    q = e.target.firstElementChild.value.trim();
+   let q = e.target.firstElementChild.value.trim();
     if (q === '') {
         Notify.info('Enter your request, please!', paramsForNotify);
         return;
