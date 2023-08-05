@@ -19,7 +19,7 @@ refs.loadMoreBtn.classList.add('is-hidden');
 let searchResults = '';
 let page = 1;
 const perPage = 40;
-paramsForNotify = {
+const paramsForNotify = {
     timeout: 5000,
     width: '500px',
     fontSize: '12px'
