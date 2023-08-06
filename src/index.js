@@ -18,6 +18,8 @@ refs.loadMoreBtn.classList.add('is-hidden');
 
 let searchResults = '';
 let page = 1;
+q = '';
+console.log(q);
 const perPage = 40;
 const paramsForNotify = {
     timeout: 5000,
@@ -31,7 +33,12 @@ function onSearch(e){
     refs.gallery.innerHTML = '';
     page = 1;
 
-   let q = e.target.firstElementChild.value.trim();
+    const { searchQuery } = e.currentTarget.elements;
+    q = searchQuery.value
+        .trim()
+        .toLowerCase()
+        .split(' ')
+        .join('+');
     if (q === '') {
         Notify.info('Enter your request, please!', paramsForNotify);
         return;
@@ -59,8 +66,7 @@ function onSearch(e){
          refs.loadMoreBtn.classList.remove('is-hidden');
     
       }).catch(console.log).finally()
-      { e.currentTarget.reset();
-
+      {e.currentTarget.reset();
     }
 
 }
