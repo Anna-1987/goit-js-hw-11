@@ -18,7 +18,7 @@ refs.loadMoreBtn.classList.add('is-hidden');
 
 let searchResults = '';
 let page = 1;
-q = '';
+let q = '';
 console.log(q);
 const perPage = 40;
 const paramsForNotify = {
